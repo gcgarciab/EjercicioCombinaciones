@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Ejercicio Vivelab</title>
+</head>
+<body>
+    <section class="wrapper">
+        <h1 class="title">Número combinado de mayor denominación posible</h1>
+        <section class="instructions">
+            <ol class="list">
+            <li class="item"><span>Ingrese números enteros positivos a su gusto separados por espacios (' ').</span></li>
+                <li class="item"><span>Haga click en "CALCULAR" para ver el resultado de acuerdo a los números ingresados.</span></li>
+                <li class="item"><span>Haga click en "REINICIAR" para volver a calcular un nuevo resultado.</span></li>
+            </ol>
+        </section>
+        <section id="numbers-content">
+            <form class="info">
+                <div class="numbers">
+                    <label>Ingrese aquí sus números:</label>
+                    <input type="text" id="numbers" onkeypress="return isValid(event)"/>
+                </div>
+                <button class="action" onclick="calcResult(event);">Calcular</button>
+                <button class="clear" onclick="this.form.reset();">Reiniciar</button>
+                <div class="result">
+                    <h4 class="subtitle">Resultado:</h4>
+                    <ul>
+                        <li>El número combinado de mayor denominación es: <span id="data"></span></li>
+                    </ul>
+                </div>
+            </form>
+        </section>
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
